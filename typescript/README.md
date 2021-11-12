@@ -43,6 +43,11 @@ The style of the generated JS code is determined by two options in the [tsconfig
 
 #### ES5 syntax with CommonJS modules
 
+```json
+"target": "ES5",
+"module": "commonjs"
+```
+
 ```js
 // dist-es5-commonjs/import.js
 "use strict";
@@ -53,6 +58,11 @@ exports.world = world;
 ```
 
 #### ES6 syntax with CommonJS modules
+
+```json
+"target": "ES6",
+"module": "commonjs"
+```
 
 ES6 supports arrow functions, while ES5 doesn't. So when the code is transpiled to ES6, the arrow function is preserved:
 
@@ -67,11 +77,16 @@ exports.world = world;
 
 #### ES6 syntax with ES modules
 
-When using ES modules, it is crucial that either `"type": "module"` is set in the package.json, or (like in this case) the JS files have the `.mjs` extension.
+```json
+"target": "ES6",
+"module": "ES6"
+```
 
 ```js
 // dist-es6-es6/import.mjs
 export const world = () => 'world';
 ```
+
+When using ES modules, it is crucial that either `"type": "module"` is set in the package.json, or (like in this case) the JS files have the `.mjs` extension.
 
 The node command needs to be executed with the `--es-module-specifier-resolution=node` option.
