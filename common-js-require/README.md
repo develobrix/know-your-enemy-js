@@ -1,6 +1,10 @@
 # CommonJS / require
 
-Without any further configuration, node.js will import modules as CommonJS modules, meaning that they are declared by
+* `npm run start` - execute code that uses the CommonJS syntax with `module.exports` and `require`
+
+## Explanation
+
+Without any further configuration, node.js will import modules as **CommonJS modules**, meaning that they are declared by
 
 ```javascript
 // import.js
