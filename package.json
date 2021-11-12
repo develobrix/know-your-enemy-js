@@ -1,12 +1,7 @@
 {
-  "name": "know-your-enemy",
+  "name": "know-your-enemy-js",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "description": "A playground for understanding the JavaScript ecosystem",
+  "author": "Brix <brixblog@gmail.com>",
+  "license": "MIT"
 }
