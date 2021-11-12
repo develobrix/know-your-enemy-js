@@ -1,0 +1,21 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "build:es5:commonjs": "rm -rf ./dist-es5-commonjs && tsc -p ./tsconfig-es5-commonjs.json",
+    "build:es6:commonjs": "rm -rf ./dist-es6-commonjs && tsc -p ./tsconfig-es6-commonjs.json",
+    "build:es6:es6": "rm -rf ./dist-es6-es6 && tsc -p ./tsconfig-es6-es6.json",
+    "start:es5:commonjs": "npm run build:es5:commonjs && node ./dist-es5-commonjs/index.js",
+    "start:es6:commonjs": "npm run build:es6:commonjs && node ./dist-es6-commonjs/index.js",
+    "start:es6:es6": "npm run build:es6:es6 && npm run convert:es6:mjs && node --es-module-specifier-resolution=node ./dist-es6-es6/index.mjs",
+    "convert:es6:mjs": "mv ./dist-es6-es6/index.js ./dist-es6-es6/index.mjs && mv ./dist-es6-es6/import.js ./dist-es6-es6/import.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  }
+}
